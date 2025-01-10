@@ -156,9 +156,8 @@ class SelectDecorator extends Select implements PlatformDecoratorInterface
             $offsetParamName = $driver->formatParameterName('offset');
 
             array_push($sqls, sprintf(
-                // @codingStandardsIgnoreStart
+                // phpcs:ignore Generic.Files.LineLength.TooLong
                 ") AS LAMINAS_IBMDB2_SERVER_LIMIT_OFFSET_EMULATION WHERE LAMINAS_IBMDB2_SERVER_LIMIT_OFFSET_EMULATION.LAMINAS_DB_ROWNUM BETWEEN %s AND %s",
-                // @codingStandardsIgnoreEnd
                 $offsetParamName,
                 $limitParamName
             ));
@@ -178,9 +177,8 @@ class SelectDecorator extends Select implements PlatformDecoratorInterface
             }
 
             array_push($sqls, sprintf(
-                // @codingStandardsIgnoreStart
+                // phpcs:ignore Generic.Files.LineLength.TooLong
                 ") AS LAMINAS_IBMDB2_SERVER_LIMIT_OFFSET_EMULATION WHERE LAMINAS_IBMDB2_SERVER_LIMIT_OFFSET_EMULATION.LAMINAS_DB_ROWNUM BETWEEN %d AND %d",
-                // @codingStandardsIgnoreEnd
                 $offset,
                 (int) $this->limit + (int) $this->offset
             ));

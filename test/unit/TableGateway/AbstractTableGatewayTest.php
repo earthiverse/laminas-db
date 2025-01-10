@@ -402,10 +402,9 @@ class AbstractTableGatewayTest extends TestCase
     /**
      * @covers \Laminas\Db\TableGateway\AbstractTableGateway::__get
      */
-    // @codingStandardsIgnoreStart
+    // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     public function test__get()
     {
-        // @codingStandardsIgnoreEnd
         $this->table->insert(['foo']); // trigger last insert id update
 
         self::assertEquals(10, $this->table->lastInsertValue);
@@ -416,10 +415,9 @@ class AbstractTableGatewayTest extends TestCase
     /**
      * @covers \Laminas\Db\TableGateway\AbstractTableGateway::__clone
      */
-    // @codingStandardsIgnoreStart
+    // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     public function test__clone()
     {
-        // @codingStandardsIgnoreEnd
         $cTable = clone $this->table;
         self::assertSame($this->mockAdapter, $cTable->getAdapter());
     }

@@ -323,10 +323,9 @@ class AdapterTest extends TestCase
      * @testdox unit test: Test __get() works
      * @covers \Laminas\Db\Adapter\Adapter::__get
      */
-    // @codingStandardsIgnoreStart
+    // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     public function test__get()
     {
-        // @codingStandardsIgnoreEnd
         self::assertSame($this->mockDriver, $this->adapter->driver);
         self::assertSame($this->mockDriver, $this->adapter->DrivER);
         self::assertSame($this->mockPlatform, $this->adapter->PlatForm);
