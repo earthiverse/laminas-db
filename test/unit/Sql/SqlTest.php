@@ -53,10 +53,9 @@ class SqlTest extends TestCase
     /**
      * @covers \Laminas\Db\Sql\Sql::__construct
      */
-    // @codingStandardsIgnoreStart
+    // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     public function test__construct()
     {
-        // @codingStandardsIgnoreEnd
         $sql = new Sql($this->mockAdapter);
 
         self::assertFalse($sql->hasTable());
@@ -188,10 +187,9 @@ class SqlTest extends TestCase
             'SELECT * FROM (SELECT b.*, rownum b_rownum FROM ( SELECT "foo".* FROM "foo" ) b ) WHERE b_rownum > (10)',
             $this->sql->buildSqlString($select, $adapterOracle)
         );
-        // @codingStandardsIgnoreStart
         $adapterOracle->getDriver()->createStatement()->expects($this->any())->method('setSql')
+                // phpcs:ignore Generic.Files.LineLength.TooLong
                 ->with($this->equalTo('SELECT * FROM (SELECT b.*, rownum b_rownum FROM ( SELECT "foo".* FROM "foo" ) b ) WHERE b_rownum > (:offset)'));
-        // @codingStandardsIgnoreEnd
         $this->sql->prepareStatementForSqlObject($select, null, $adapterOracle);
 
         // SqlServer

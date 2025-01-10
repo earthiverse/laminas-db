@@ -227,19 +227,17 @@ class InsertIgnoreTest extends TestCase
         );
     }
 
-    // @codingStandardsIgnoreStart
+    // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     public function test__set()
     {
-        // @codingStandardsIgnoreEnd
         $this->insert->foo = 'bar';
         self::assertEquals(['foo'], $this->insert->getRawState('columns'));
         self::assertEquals(['bar'], $this->insert->getRawState('values'));
     }
 
-    // @codingStandardsIgnoreStart
+    // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     public function test__unset()
     {
-        // @codingStandardsIgnoreEnd
         $this->insert->foo = 'bar';
         self::assertEquals(['foo'], $this->insert->getRawState('columns'));
         self::assertEquals(['bar'], $this->insert->getRawState('values'));
@@ -256,10 +254,9 @@ class InsertIgnoreTest extends TestCase
         self::assertEquals([], $this->insert->getRawState('values'));
     }
 
-    // @codingStandardsIgnoreStart
+    // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     public function test__isset()
     {
-        // @codingStandardsIgnoreEnd
         $this->insert->foo = 'bar';
         self::assertTrue(isset($this->insert->foo));
 
@@ -267,10 +264,9 @@ class InsertIgnoreTest extends TestCase
         self::assertTrue(isset($this->insert->foo));
     }
 
-    // @codingStandardsIgnoreStart
+    // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     public function test__get()
     {
-        // @codingStandardsIgnoreEnd
         $this->insert->foo = 'bar';
         self::assertEquals('bar', $this->insert->foo);
 

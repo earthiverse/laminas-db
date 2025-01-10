@@ -41,9 +41,8 @@ class CreateTableDecoratorTest extends TestCase
         $ct->addColumn($col);
 
         self::assertEquals(
-            // @codingStandardsIgnoreStart
+            // phpcs:ignore Generic.Files.LineLength.TooLong
             "CREATE TABLE `foo` ( \n    `bar` INTEGER UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT 'baz' COLUMN_FORMAT FIXED STORAGE MEMORY \n)",
-            // @codingStandardsIgnoreEnd
             @$ctd->getSqlString(new Mysql())
         );
     }

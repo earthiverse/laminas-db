@@ -70,10 +70,9 @@ class AbstractRowGatewayTest extends TestCase
     /**
      * @covers \Laminas\Db\RowGateway\RowGateway::__set
      */
-    // @codingStandardsIgnoreStart
+    // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     public function test__set()
     {
-        // @codingStandardsIgnoreEnd
         // If we set with a property, both getters should retrieve the same value:
         $this->rowGateway->testColumn = 'test';
         self::assertEquals('test', $this->rowGateway->testColumn);
@@ -83,10 +82,9 @@ class AbstractRowGatewayTest extends TestCase
     /**
      * @covers \Laminas\Db\RowGateway\RowGateway::__isset
      */
-    // @codingStandardsIgnoreStart
+    // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     public function test__isset()
     {
-        // @codingStandardsIgnoreEnd
         // Test isset before and after assigning to a property:
         self::assertFalse(isset($this->rowGateway->foo));
         $this->rowGateway->foo = 'bar';
@@ -107,10 +105,9 @@ class AbstractRowGatewayTest extends TestCase
     /**
      * @covers \Laminas\Db\RowGateway\RowGateway::__unset
      */
-    // @codingStandardsIgnoreStart
+    // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     public function test__unset()
     {
-        // @codingStandardsIgnoreEnd
         $this->rowGateway->foo = 'bar';
         self::assertEquals('bar', $this->rowGateway->foo);
         unset($this->rowGateway->foo);
@@ -144,10 +141,9 @@ class AbstractRowGatewayTest extends TestCase
     /**
      * @covers \Laminas\Db\RowGateway\RowGateway::__get
      */
-    // @codingStandardsIgnoreStart
+    // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     public function test__get()
     {
-        // @codingStandardsIgnoreEnd
         // If we set with a property, both getters should retrieve the same value:
         $this->rowGateway->testColumn = 'test';
         self::assertEquals('test', $this->rowGateway->testColumn);

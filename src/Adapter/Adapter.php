@@ -328,7 +328,6 @@ class Adapter implements AdapterInterface, Profiler\ProfilerAwareInterface
     }
 
     /**
-     * @param array $parameters
      * @return Platform\PlatformInterface
      */
     protected function createPlatform(array $parameters)
@@ -410,7 +409,6 @@ class Adapter implements AdapterInterface, Profiler\ProfilerAwareInterface
     /**
      * @deprecated
      *
-     * @param array $parameters
      * @return Driver\DriverInterface
      * @throws InvalidArgumentException
      * @throws Exception\InvalidArgumentException

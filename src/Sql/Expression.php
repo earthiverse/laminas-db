@@ -104,7 +104,6 @@ class Expression extends AbstractExpression
     /**
      * @deprecated
      *
-     * @param array $types
      * @return $this Provides a fluent interface
      */
     public function setTypes(array $types)

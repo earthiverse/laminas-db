@@ -45,9 +45,8 @@ class CombineTest extends TestCase
                 ->union(new Select('t4'));
 
         self::assertEquals(
-            // @codingStandardsIgnoreStart
+            // phpcs:ignore Generic.Files.LineLength.TooLong
             '(SELECT "t1".* FROM "t1") INTERSECT (SELECT "t2".* FROM "t2") EXCEPT (SELECT "t3".* FROM "t3") UNION (SELECT "t4".* FROM "t4")',
-            // @codingStandardsIgnoreEnd
             $this->combine->getSqlString()
         );
     }
